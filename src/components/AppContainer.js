@@ -4,7 +4,8 @@ import App from './App';
 import actions from '../actions/actions';
 
 const mapStateToProps = state => ({
-  ...state
+  ...state,
+  something: 'testing prop',
 });
 
 const mapDispatchToProps = dispatch => ({
