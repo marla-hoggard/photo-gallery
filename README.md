@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a starting place for any basic react app using redux. It was created with [Create React App](https://github.com/facebook/create-react-app), and includes redux, react-redux and redux-thunk. The basic architecture is set up. Fork this repo to begin your own single-page react app.
 
 ## Available Scripts
 
