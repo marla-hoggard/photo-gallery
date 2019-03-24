@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
 
+import NameLink from '../NameLink';
 import '../../stylesheets/Thumbnail.css';
 
 class Thumbnail extends Component {
   constructor(props) {
     super(props);
-    this.goToUser = this.goToUser.bind(this);
     this.goToAlbum = this.goToAlbum.bind(this);
   }
 
   goToAlbum() {
     this.props.setCurrentAlbum(this.props.albumId);
     this.props.hideUserView();
-  }
-
-  goToUser() {
-    this.props.setCurrentUser(this.props.userDetails.id);
-    this.props.showUserView();
   }
 
   render() {
@@ -35,12 +30,7 @@ class Thumbnail extends Component {
         />
         { showUserDetails &&
           <div className="thumb--name">By:&nbsp;
-            <span 
-              className="name-link"
-              onClick={this.goToUser}
-            >
-              {userDetails.name}
-            </span>
+            <NameLink userDetails={userDetails} />
           </div>
         }
       </div>

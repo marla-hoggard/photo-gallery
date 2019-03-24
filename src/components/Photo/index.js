@@ -5,6 +5,7 @@ import {
   hideUserView,
   setCurrentAlbum,
   setCurrentUser,
+  setCurrentPhoto,
   showUserView,
 } from '../../actions';
 import {
@@ -20,6 +21,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
   hideUserView: () => dispatch(hideUserView()),
   setCurrentAlbum: (id) => dispatch(setCurrentAlbum(id)),
+  setCurrentPhoto: (id) => dispatch(setCurrentPhoto(id)),
   setCurrentUser: (id) => dispatch(setCurrentUser(id)),
   showUserView: () => dispatch(showUserView()),
 })

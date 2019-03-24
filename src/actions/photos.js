@@ -2,6 +2,8 @@ import {
   GET_PHOTOS_PENDING,
   GET_PHOTOS_FULFILLED,
   GET_PHOTOS_REJECTED,
+  NEXT_PHOTO,
+  PREVIOUS_PHOTO,
   SET_CURRENT_PHOTO,
 } from './actionTypes';
 
@@ -35,7 +37,15 @@ export const getPhotosRejected = error => ({
   payload: { error }
 });
 
-export const setCurrentPhoto = id => ({
+export const nextPhoto = () => ({
+  type: NEXT_PHOTO,
+});
+
+export const previousPhoto = () => ({
+  type: PREVIOUS_PHOTO,
+});
+
+export const setCurrentPhoto = index => ({
   type: SET_CURRENT_PHOTO,
-  payload: { id },
+  payload: { index }
 });

@@ -1,10 +1,50 @@
-.photo-album-container {
+.large-photo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.large-photo-title {
+  background: #ccc;
+  padding: 10px;
+  width: 580px;
+  text-align: center;
+  font-style: italic;
+}
+
+.author-div {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.author-name {
+  color: #0099cc;
+  font-weight: 600;
+}
+
+.author-name:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.prev-photo, .next-photo {
+  cursor: pointer;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.thumbs-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-row-gap: 5px;
 }
 
 .container-title {
+  text-align: center;
   font-weight: bold;
   size: 1.25em;
 }

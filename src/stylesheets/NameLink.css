@@ -1,0 +1,12 @@
+.name-link {
+  font-weight: 600;
+}
+
+.name-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.name-link-color {
+  color: #0099cc;
+}

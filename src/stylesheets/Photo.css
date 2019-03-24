@@ -1,0 +1,22 @@
+.thumb--container {
+  display: block;
+  justify-self: center;
+}
+
+.thumb--image {
+  border: 2px solid transparent;
+}
+
+.thumb--image:hover {
+  cursor: pointer;
+  border: 2px solid #0099cc;
+}
+
+.thumb--selected {
+  border: 2px solid black;
+}
+
+.thumb--name {
+  text-align: center;
+  font-size: 0.75em;
+}

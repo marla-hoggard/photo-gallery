@@ -5,6 +5,8 @@
 }
 
 .container-title {
+  text-align: center;
   font-weight: bold;
   size: 1.25em;
+  margin-bottom: 10px;
 }

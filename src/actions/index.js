@@ -16,6 +16,8 @@ export {
   getPhotosPending,
   getPhotosFulfilled,
   getPhotosRejected,
+  nextPhoto,
+  previousPhoto,
   setCurrentPhoto,
 } from './photos';
 

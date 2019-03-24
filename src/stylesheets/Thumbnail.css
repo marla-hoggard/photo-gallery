@@ -16,13 +16,3 @@
   text-align: center;
   font-size: 0.75em;
 }
-
-.name-link {
-  color: #0099cc;
-  font-weight: 600;
-}
-
-.name-link:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}

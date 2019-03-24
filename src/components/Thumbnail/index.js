@@ -24,6 +24,6 @@ const mapDispatchToProps = dispatch => ({
   setCurrentAlbum: (id) => dispatch(setCurrentAlbum(id)),
   setCurrentUser: (id) => dispatch(setCurrentUser(id)),
   showUserView: () => dispatch(showUserView()),
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Thumbnail);

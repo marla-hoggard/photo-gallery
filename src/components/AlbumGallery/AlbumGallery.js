@@ -8,7 +8,7 @@ class AlbumGallery extends Component {
     if (this.props.selectedUserName) {
       return `Albums by ${this.props.selectedUserName}`;
     } 
-    return "All albums";
+    return "";
   }
   render() {
     const { 

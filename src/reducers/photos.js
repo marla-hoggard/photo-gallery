@@ -2,12 +2,14 @@ import {
   GET_PHOTOS_PENDING,
   GET_PHOTOS_FULFILLED,
   GET_PHOTOS_REJECTED,
+  NEXT_PHOTO,
+  PREVIOUS_PHOTO,
   SET_CURRENT_PHOTO,
 } from '../actions/actionTypes';
 
 const defaultState = {
   photos: [],
-  currentId: null,
+  currentIndex: 0,
   loading: false,
   error: null,
 };
@@ -32,10 +34,20 @@ export default (state = defaultState, action) => {
         loading: false,
         error: action.payload.error,
       }
-    case SET_CURRENT_PHOTO:
+    case NEXT_PHOTO:
       return {
         ...state,
-        currentId: action.payload.id,
+        currentIndex: state.currentIndex < state.photos.length - 1 ? state.currentIndex + 1 : state.currentIndex,
+      }
+    case PREVIOUS_PHOTO:
+      return {
+        ...state,
+        currentIndex: state.currentIndex > 0 ? state.currentIndex - 1 : 0,
+      }
+      case SET_CURRENT_PHOTO:
+      return {
+        ...state,
+        currentIndex: action.payload.index,
       }
     default:
       return state

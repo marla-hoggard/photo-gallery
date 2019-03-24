@@ -6,12 +6,23 @@ import {
   getPhotos,
   getUsers,
 } from '../actions';
+import { 
+  getAlbumDetails,
+  getUserDetails,
+  getUserDetailsByAlbumId,
+} from '../reducers/selectors';
 
-const mapStateToProps = state => ({
-  fetched: state.albums.albums.length && state.photos.photos.length && state.users.users.length,
-  selectedAlbum: state.albums.currentId,
-  viewUserDetailsPage: state.app.showUserDetails,
-});
+const mapStateToProps = state => {
+  const userId = state.users.currentId || getUserDetailsByAlbumId(state, state.albums.currentId).id;
+  
+  return {  
+    fetched: state.albums.albums.length && state.photos.photos.length && state.users.users.length,
+    selectedAlbum: state.albums.currentId,
+    albumDetails: getAlbumDetails(state, state.albums.currentId),
+    userDetails: getUserDetails(state, userId),
+    viewUserDetailsPage: state.app.showUserDetails,
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   getAlbums: () => dispatch(getAlbums()),

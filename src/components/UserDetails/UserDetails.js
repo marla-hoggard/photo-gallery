@@ -11,8 +11,7 @@ class UserDetails extends Component {
     } = this.props;
     return (
       <>
-        <h1>{userDetails.name}</h1>
-        <h3>{userDetails.username}</h3>
+        <p>Username: {userDetails.username}</p>
         <p>Email: {userDetails.email}</p>
         <p>
           Address:<br/>
