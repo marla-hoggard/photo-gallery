@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import NameLink from '../NameLink';
-import '../../stylesheets/Thumbnail.css';
+import '../../stylesheets/images.css';
 
 class Thumbnail extends Component {
   constructor(props) {

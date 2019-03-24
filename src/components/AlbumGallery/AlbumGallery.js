@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Thumbnail from '../Thumbnail';
-import '../../stylesheets/AlbumGallery.css';
+import '../../stylesheets/images.css';
 
 class AlbumGallery extends Component {
   get title() {
@@ -17,8 +17,8 @@ class AlbumGallery extends Component {
     } = this.props;
     return (
       <>
-        <div className="container-title">{this.title}</div>
-        <div className="album-gallery-container">
+        <div className="thumbs--container-title">{this.title}</div>
+        <div className="thumbs--container">
           {
             albums.map(album =>
               <Thumbnail key={album.id} albumId={album.id} showUserDetails={showUserDetails} />

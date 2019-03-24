@@ -4,6 +4,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
 import Photo from '../Photo';
+import '../../stylesheets/images.css';
 import '../../stylesheets/PhotoAlbum.css';
 
 const PhotoAlbum = ({ 
@@ -35,7 +36,7 @@ const PhotoAlbum = ({
         <KeyboardArrowRight />
       </div>
     </div>
-    <div className="thumbs-container">
+    <div className="thumbs--container">
       {
         photos.map((photo, i) =>
           <Photo 

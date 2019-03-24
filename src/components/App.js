@@ -6,7 +6,6 @@ import Loader from './Loader';
 import NameLink from './NameLink/index';
 import PhotoAlbum from './PhotoAlbum';
 import UserDetails from './UserDetails';
-import '../stylesheets/App.css';
 
 class App extends Component {
   constructor(props) {
