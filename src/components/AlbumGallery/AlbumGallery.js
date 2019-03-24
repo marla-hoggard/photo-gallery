@@ -4,19 +4,28 @@ import Thumbnail from '../Thumbnail';
 import '../../stylesheets/AlbumGallery.css';
 
 class AlbumGallery extends Component {
+  get title() {
+    if (this.props.selectedUserName) {
+      return `Albums by ${this.props.selectedUserName}`;
+    } 
+    return "All albums";
+  }
   render() {
     const { 
       albums,
       showUserDetails,
     } = this.props;
     return (
-      <div className="album-gallery-container">
-        {
-          albums.map(album =>
-            <Thumbnail key={album.id} albumId={album.id} showUserDetails={showUserDetails} />
-          )
-        }
-      </div>
+      <>
+        <div className="container-title">{this.title}</div>
+        <div className="album-gallery-container">
+          {
+            albums.map(album =>
+              <Thumbnail key={album.id} albumId={album.id} showUserDetails={showUserDetails} />
+            )
+          }
+        </div>
+      </>
     );
   }
 }

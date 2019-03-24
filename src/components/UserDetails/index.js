@@ -1,10 +1,6 @@
 import { connect } from 'react-redux';
 
 import UserDetails from './UserDetails';
-import {
-  setCurrentAlbum,
-  toggleUserView,
-} from '../../actions';
 
 import {
   getUserDetails,

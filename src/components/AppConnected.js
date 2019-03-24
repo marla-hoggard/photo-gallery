@@ -5,7 +5,6 @@ import {
   getAlbums,
   getPhotos,
   getUsers,
-  toggleUserView,
 } from '../actions';
 
 const mapStateToProps = state => ({
@@ -18,7 +17,6 @@ const mapDispatchToProps = dispatch => ({
   getAlbums: () => dispatch(getAlbums()),
   getPhotos: () => dispatch(getPhotos()),
   getUsers: () => dispatch(getUsers()),
-  toggleUserView: () => dispatch(toggleUserView()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

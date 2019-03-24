@@ -1,0 +1,10 @@
+.photo-album-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-row-gap: 5px;
+}
+
+.container-title {
+  font-weight: bold;
+  size: 1.25em;
+}

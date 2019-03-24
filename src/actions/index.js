@@ -1,5 +1,6 @@
 export {
-  toggleUserView,
+  showUserView,
+  hideUserView,
 } from './app';
 
 export { 

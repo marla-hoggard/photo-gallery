@@ -1,5 +1,6 @@
 import {
-  TOGGLE_USER_VIEW,
+  HIDE_USER_VIEW,
+  SHOW_USER_VIEW,
 } from '../actions/actionTypes';
 
 const defaultState = {
@@ -8,10 +9,15 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case TOGGLE_USER_VIEW:
+    case SHOW_USER_VIEW:
       return {
         ...state,
-        showUserDetails: !state.showUserDetails,
+        showUserDetails: true,
+      }
+    case HIDE_USER_VIEW:
+      return {
+        ...state,
+        showUserDetails: false,
       }
     default:
       return state

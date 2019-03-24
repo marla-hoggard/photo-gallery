@@ -5,6 +5,13 @@ export const getAlbumsBySelectedUser = state => {
   return state.albums.albums.filter(album => album.userId === state.users.currentId);
 };
 
+export const getAlbumDetails = (state, albumId) => {
+  if (!albumId) {
+    return {};
+  }
+  return state.albums.albums.find(album => album.id === albumId);
+} 
+
 export const getUserDetails = (state, userId) => {
   if (!userId) {
     return {};
@@ -25,6 +32,10 @@ export const getPhotosInSelectedAlbum = state => {
     return [];
   }
   return state.photos.photos.filter(photo => photo.albumId === state.albums.currentId);
+}
+
+export const getPhoto = (state, photoId) => {
+  return state.photos.photos.find(photo => photo.id === photoId);
 }
 
 export const getAlbumThumbnail = (state, albumId) => {

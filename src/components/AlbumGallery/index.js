@@ -2,20 +2,16 @@ import { connect } from 'react-redux';
 
 import AlbumGallery from './AlbumGallery';
 import {
-  setCurrentAlbum,
-  toggleUserView,
-} from '../../actions';
-import {
-  getAlbumsBySelectedUser,
+  getAlbumsBySelectedUser, getUserDetails,
 } from '../../reducers/selectors';
 
-const mapStateToProps = state => ({
-  albums: getAlbumsBySelectedUser(state, state.users.currentId),
-});
+const mapStateToProps = state => {
+  const currentUserId = state.users.currentId;
+  return {
+    albums: getAlbumsBySelectedUser(state, currentUserId),
+    selectedUserName: currentUserId && getUserDetails(state, currentUserId).name,
+  };
+};
 
-const mapDispatchToProps = dispatch => ({
-  setCurrentAlbum: () => dispatch(setCurrentAlbum()),
-  toggleUserView: () => dispatch(toggleUserView()),
-})
 
-export default connect(mapStateToProps, mapDispatchToProps)(AlbumGallery);
+export default connect(mapStateToProps)(AlbumGallery);

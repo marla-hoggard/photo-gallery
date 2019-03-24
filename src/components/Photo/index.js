@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import Thumbnail from './Thumbnail';
+import Photo from './Photo';
 import {
   hideUserView,
   setCurrentAlbum,
@@ -8,14 +8,12 @@ import {
   showUserView,
 } from '../../actions';
 import {
-  getAlbumThumbnail, 
-  getUserDetailsByAlbumId,
+  getPhoto,
 } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    image: getAlbumThumbnail(state, ownProps.albumId),
-    userDetails: getUserDetailsByAlbumId(state, ownProps.albumId),
+    image: getPhoto(state, ownProps.photoId),
   }
 };
 
@@ -26,4 +24,4 @@ const mapDispatchToProps = dispatch => ({
   showUserView: () => dispatch(showUserView()),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Thumbnail);
+export default connect(mapStateToProps, mapDispatchToProps)(Photo);
