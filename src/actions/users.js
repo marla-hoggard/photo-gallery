@@ -2,9 +2,10 @@ import {
   GET_USERS_PENDING,
   GET_USERS_FULFILLED,
   GET_USERS_REJECTED,
+  SET_CURRENT_USER,
 } from './actionTypes';
 
-import { handleErrors } from '.'
+import { handleErrors } from './actionHelpers';
 
 export const getUsers = () => {
   return dispatch => {
@@ -32,4 +33,9 @@ export const getUsersFulfilled = users => ({
 export const getUsersRejected = error => ({
   type: GET_USERS_REJECTED,
   payload: { error }
+});
+
+export const setCurrentUser = id => ({
+  type: SET_CURRENT_USER,
+  payload: { id },
 });

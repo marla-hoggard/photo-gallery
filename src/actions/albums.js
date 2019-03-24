@@ -2,9 +2,10 @@ import {
   GET_ALBUMS_PENDING,
   GET_ALBUMS_FULFILLED,
   GET_ALBUMS_REJECTED,
+  SET_CURRENT_ALBUM,
 } from './actionTypes';
 
-import { handleErrors } from '.'
+import { handleErrors } from './actionHelpers';
 
 export const getAlbums = () => {
   return dispatch => {
@@ -26,10 +27,15 @@ export const getAlbumsPending = () => ({
 
 export const getAlbumsFulfilled = albums => ({
   type: GET_ALBUMS_FULFILLED,
-  payload: { albums }
+  payload: { albums },
 });
 
 export const getAlbumsRejected = error => ({
   type: GET_ALBUMS_REJECTED,
-  payload: { error }
+  payload: { error },
+});
+
+export const setCurrentAlbum = id => ({
+  type: SET_CURRENT_ALBUM,
+  payload: { id },
 });

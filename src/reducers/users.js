@@ -2,10 +2,12 @@ import {
   GET_USERS_PENDING,
   GET_USERS_FULFILLED,
   GET_USERS_REJECTED,
+  SET_CURRENT_USER,
 } from '../actions/actionTypes';
 
 const defaultState = {
   users: [],
+  currentId: null,
   loading: false,
   error: null,
 };
@@ -29,6 +31,11 @@ export default (state = defaultState, action) => {
         ...state,
         loading: false,
         error: action.payload.error,
+      }
+    case SET_CURRENT_USER:
+      return {
+        ...state,
+        currentId: action.payload.id,
       }
     default:
       return state

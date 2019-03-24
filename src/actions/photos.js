@@ -2,9 +2,10 @@ import {
   GET_PHOTOS_PENDING,
   GET_PHOTOS_FULFILLED,
   GET_PHOTOS_REJECTED,
+  SET_CURRENT_PHOTO,
 } from './actionTypes';
 
-import { handleErrors } from '.'
+import { handleErrors } from './actionHelpers';
 
 export const getPhotos = () => {
   return dispatch => {
@@ -32,4 +33,9 @@ export const getPhotosFulfilled = photos => ({
 export const getPhotosRejected = error => ({
   type: GET_PHOTOS_REJECTED,
   payload: { error }
+});
+
+export const setCurrentPhoto = id => ({
+  type: SET_CURRENT_PHOTO,
+  payload: { id },
 });

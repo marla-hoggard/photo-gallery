@@ -1,8 +1,13 @@
+export {
+  toggleUserView,
+} from './app';
+
 export { 
   getAlbums,
   getAlbumsPending,
   getAlbumsFulfilled,
   getAlbumsRejected,
+  setCurrentAlbum,
 } from './albums';
 
 export { 
@@ -10,6 +15,7 @@ export {
   getPhotosPending,
   getPhotosFulfilled,
   getPhotosRejected,
+  setCurrentPhoto,
 } from './photos';
 
 export { 
@@ -17,11 +23,5 @@ export {
   getUsersPending,
   getUsersFulfilled,
   getUsersRejected,
+  setCurrentUser,
 } from './users';
-
-export const handleErrors = response => {
-  if (!response.ok) {
-    throw Error(response.statusText);
-  }
-  return response;
-}

@@ -2,10 +2,12 @@ import {
   GET_PHOTOS_PENDING,
   GET_PHOTOS_FULFILLED,
   GET_PHOTOS_REJECTED,
+  SET_CURRENT_PHOTO,
 } from '../actions/actionTypes';
 
 const defaultState = {
   photos: [],
+  currentId: null,
   loading: false,
   error: null,
 };
@@ -29,6 +31,11 @@ export default (state = defaultState, action) => {
         ...state,
         loading: false,
         error: action.payload.error,
+      }
+    case SET_CURRENT_PHOTO:
+      return {
+        ...state,
+        currentId: action.payload.id,
       }
     default:
       return state
