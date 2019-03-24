@@ -1,15 +1,22 @@
 import { connect } from 'react-redux';
 
 import App from './App';
-import actions from '../actions/actions';
+import {
+  getAlbums,
+  getPhotos,
+  getUsers,
+} from '../actions';
 
 const mapStateToProps = state => ({
-  ...state,
-  something: 'testing prop',
+  albums: state.albums.albums,
+  photos: state.photos.photos,
+  users: state.users.users,
 });
 
 const mapDispatchToProps = dispatch => ({
-  reduxThing: () => dispatch(actions()),
+  getAlbums: () => dispatch(getAlbums()),
+  getPhotos: () => dispatch(getPhotos()),
+  getUsers: () => dispatch(getUsers()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

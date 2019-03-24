@@ -4,6 +4,12 @@ import logo from '../logo.svg';
 import '../stylesheets/App.css';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.getAlbums();
+    this.props.getPhotos();
+    this.props.getUsers();
+  }
+
   render() {
     return (
       <div className="App">
