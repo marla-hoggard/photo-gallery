@@ -19,3 +19,10 @@ export const getAvatar = i => {
       return avatar4;
   }
 }
+
+export const capitalize = title => {
+  return title.trim()
+    .split(' ')
+    .map(word => word[0].toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+}

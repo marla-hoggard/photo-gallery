@@ -1,3 +1,17 @@
+.thumbs--container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-row-gap: 0px;
+  grid-column-gap: 5px;
+}
+
+.thumbs--container-title {
+  text-align: center;
+  font-weight: bold;
+  size: 1.25em;
+  margin-bottom: 10px;
+}
+
 .thumb--container {
   display: block;
   justify-self: center;
@@ -16,20 +30,21 @@
   border: 2px solid black;
 }
 
+.thumb--banner {
+  position: relative;
+  top: -52px;
+  z-index: 1;
+  background: rgba(63, 81, 181, 0.6);
+  padding: 3px;
+  height: 37px;
+  width: 148px;
+  color: white;
+}
+
+.thumb--title {
+  font-size: 0.9em;
+}
+
 .thumb--name {
-  text-align: center;
   font-size: 0.75em;
-}
-
-.thumbs--container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-row-gap: 5px;
-}
-
-.thumbs--container-title {
-  text-align: center;
-  font-weight: bold;
-  size: 1.25em;
-  margin-bottom: 10px;
 }

@@ -10,10 +10,12 @@ import {
 import {
   getAlbumThumbnail, 
   getUserDetailsByAlbumId,
+  getAlbumDetails,
 } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    albumName: getAlbumDetails(state, ownProps.albumId).title,
     image: getAlbumThumbnail(state, ownProps.albumId),
     userDetails: getUserDetailsByAlbumId(state, ownProps.albumId),
   }

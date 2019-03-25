@@ -6,20 +6,13 @@ import Loader from './Loader';
 import NameLink from './NameLink/index';
 import PhotoAlbum from './PhotoAlbum';
 import UserDetails from './UserDetails';
+import { capitalize } from '../helpers';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.goToUser = this.goToUser.bind(this);
-  }
   componentDidMount() {
     this.props.getAlbums();
     this.props.getPhotos();
     this.props.getUsers();
-  }
-
-  goToUser() {
-
   }
 
   get componentToDisplay() {
@@ -52,7 +45,7 @@ class App extends Component {
       return userDetails.name
     }
     if (selectedAlbum) {
-      return <span><NameLink header userDetails={userDetails} /> > {albumDetails.title}</span>
+      return <span><NameLink userDetails={userDetails} /> > {capitalize(albumDetails.title)}</span>
     }
     return "Photo Gallery"
   }

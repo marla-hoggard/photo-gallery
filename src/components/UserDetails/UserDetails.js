@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import AlbumGallery from '../AlbumGallery';
-import { getAvatar } from '../../images';
+import { getAvatar } from '../../helpers';
 import '../../stylesheets/UserDetails.css';
 
 class UserDetails extends Component {

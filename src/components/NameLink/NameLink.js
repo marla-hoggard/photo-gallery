@@ -16,7 +16,7 @@ class NameLink extends Component {
   render() {
     return (
       <span 
-        className={`name-link ${!this.props.header ? 'name-link-color' : ''}`}
+        className="name-link"
         onClick={this.goToUser}
       >
         {this.props.userDetails.name}
