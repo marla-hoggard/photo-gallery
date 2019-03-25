@@ -16,7 +16,7 @@ class AlbumGallery extends Component {
       showUserDetails,
     } = this.props;
     return (
-      <>
+      <div className="span2">
         <div className="thumbs--container-title">{this.title}</div>
         <div className="thumbs--container">
           {
@@ -25,7 +25,7 @@ class AlbumGallery extends Component {
             )
           }
         </div>
-      </>
+      </div>
     );
   }
 }
