@@ -11,6 +11,7 @@ class NameLink extends Component {
   goToUser() {
     this.props.setCurrentUser(this.props.userDetails.id);
     this.props.showUserView();
+    this.props.setCurrentPhoto(0);
   }
 
   render() {

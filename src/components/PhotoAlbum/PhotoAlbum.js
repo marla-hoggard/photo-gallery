@@ -17,7 +17,7 @@ const PhotoAlbum = ({
     <div className="large-photo-row">
       <div 
         className={currentIndex > 0 ? 'prev-photo': 'prev-photo disabled'}
-        onClick={previousPhoto}
+        onClick={currentIndex > 0 ? previousPhoto : undefined}
       >
         <KeyboardArrowLeft />
       </div>
@@ -31,7 +31,7 @@ const PhotoAlbum = ({
       </div>
       <div 
         className={currentIndex < photos.length - 1 ? 'next-photo': 'next-photo disabled'}
-        onClick={nextPhoto}
+        onClick={currentIndex < photos.length - 1 ? nextPhoto : undefined}
       >
         <KeyboardArrowRight />
       </div>

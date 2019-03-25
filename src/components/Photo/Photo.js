@@ -10,6 +10,7 @@ class Photo extends Component {
 
   goToPhoto() {
     this.props.setCurrentPhoto(this.props.index);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   render() {

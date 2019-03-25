@@ -16,6 +16,7 @@ class Header extends Component {
   goHome() {
     this.props.hideUserView();
     this.props.setCurrentAlbum(null);
+    this.props.setCurrentPhoto(0);
     this.props.setCurrentUser(null);
   }
 

@@ -37,7 +37,7 @@ export default (state = defaultState, action) => {
     case NEXT_PHOTO:
       return {
         ...state,
-        currentIndex: state.currentIndex < state.photos.length - 1 ? state.currentIndex + 1 : state.currentIndex,
+        currentIndex: state.currentIndex + 1,
       }
     case PREVIOUS_PHOTO:
       return {
